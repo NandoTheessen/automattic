@@ -15,8 +15,8 @@ const healthz = (req, res) => {
 };
 
 server.get("/", healthz);
-server.get("/recipes/:id", getOne);
 server.get("/recipes", getAll);
+server.get("/recipes/:id", getOne);
 server.post("/recipes", postOne);
 
 module.exports = server;

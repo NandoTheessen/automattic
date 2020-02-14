@@ -14,12 +14,12 @@ module.exports = {
     }
     res.status(200).json({ recipe: recipe });
   },
-  getAll: (req, res) => {
-    const recipes = getAllRecipes();
+  getAll: async (req, res) => {
+    const recipes = await getAllRecipes();
     if (!getAllRecipes) {
       res.status(404).json({ msg: "no recipes found!" });
       return;
     }
-    res.status(200).json({ recipes: recipes });
+    res.status(200).json(recipes);
   }
 };
