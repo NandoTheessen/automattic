@@ -1,6 +1,8 @@
 const express = require("express");
 const morgan = require("morgan");
 const helmet = require("helmet");
+const cors = require("cors");
+
 const { getOne, getAll } = require("./controllers/get");
 const { postOne } = require("./controllers/post");
 
@@ -8,6 +10,7 @@ const server = express();
 server.use(express.json());
 server.use(helmet());
 server.use(morgan("dev"));
+server.use(cors());
 
 const healthz = (req, res) => {
   console.log(req);
