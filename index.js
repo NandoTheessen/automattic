@@ -3,8 +3,8 @@ const { connect } = require("./src/data/db");
 
 const mongoHost = process.env.MONGODB_URI;
 
-const PORT = 8000;
-const HOST = "localhost";
+const PORT = process.env.PORT;
+const HOST = "0.0.0.0";
 
 console.log("Connecting to database & starting webserver.");
 mongodb: connect("recipes", mongoHost)
