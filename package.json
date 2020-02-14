@@ -1,0 +1,17 @@
+{
+  "name": "automattic",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:NandoTheessen/automattic.git",
+  "author": "Nando Theessen <nando.theessen@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "mongoose": "^5.8.12",
+    "morgan": "^1.9.1"
+  }
+}
