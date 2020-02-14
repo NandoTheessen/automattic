@@ -1,12 +1,14 @@
 const server = require("./src/server");
 const { connect } = require("./src/data/db");
 
+const mongoHost = process.env.HOST;
+const mongoPassword = process.env.PASSWORD;
+
 const PORT = 8000;
 const HOST = "localhost";
-const mongoHost = "ds219459.mlab.com:19459";
 
 console.log("Connecting to database & starting webserver.");
-mongodb: connect("recipes", mongoHost, "recipes", "Hallo1234!")
+mongodb: connect("recipes", mongoHost, "recipes", mongoPassword)
   .then(async () => {
     console.log("Succesfully connected to mongoDB.");
 
