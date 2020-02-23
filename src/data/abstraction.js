@@ -18,5 +18,10 @@ module.exports = {
     const recipe = new Recipe({ title: title, url: url });
     await recipe.save();
     return recipe;
+  },
+  deleteRecipe: async id => {
+    const deletedId = await Recipe.findByIdAndDelete(id);
+    if (!deleteRecipe) return null;
+    return deleteRecipe;
   }
 };
