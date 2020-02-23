@@ -4,7 +4,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 
 const { getOne, getAll } = require("./controllers/get");
-const { postOne } = require("./controllers/post");
+const { postOne, deleteOne } = require("./controllers/post");
 
 const server = express();
 server.use(express.json());
