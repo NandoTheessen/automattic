@@ -21,7 +21,7 @@ module.exports = {
   },
   deleteRecipe: async id => {
     const deletedId = await Recipe.findByIdAndDelete(id);
-    if (!deleteRecipe) return null;
-    return deleteRecipe;
+    if (!deletedId) return null;
+    return deletedId;
   }
 };

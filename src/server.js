@@ -20,7 +20,7 @@ const healthz = (req, res) => {
 server.get("/", healthz);
 server.get("/recipes", getAll);
 server.get("/recipes/:id", getOne);
+server.post("/recipes/:id", deleteOne);
 server.post("/recipes", postOne);
-server.delete("/recipes", deleteOne);
 
 module.exports = server;

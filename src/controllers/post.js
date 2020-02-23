@@ -20,7 +20,7 @@ module.exports = {
     res.status(200).json({ recipe: recipe });
   },
   deleteOne: async (req, res) => {
-    const { id } = req.body;
+    const { id } = req.params;
     if (!id) {
       res.status(400).json({ msg: "Please provide a valid id" });
       return;
